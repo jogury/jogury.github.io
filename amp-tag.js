@@ -1,3 +1,5 @@
+const SDK_VERSION = '2.4.3'
+
 initProfigAndTag()
 
 function uuidv4() {
@@ -83,7 +85,7 @@ function requestAd(userId) {
         body: {
             context: {
                 location: window.location.href,
-                advert_delivery_type: 'DIRECT',
+                advert_delivery_type: 'GAM',
             },
             ad_requests: adRequests
         },
@@ -96,7 +98,7 @@ function requestAd(userId) {
             headers: {
                 'X-Asset-Key': adRequestData.headers.asset_key,
                 'X-Request-ID': adRequestData.headers.request_id,
-                'X-Web-Sdk-Version': '2.4.3',
+                'X-Web-Sdk-Version': SDK_VERSION,
                 'User': adRequestData.headers.User,
             },
             body: adRequestData.body,
@@ -132,9 +134,16 @@ function requestAd(userId) {
             adResponse = adResponse[0]
             
             if (adResponse.hasOwnProperty('ad_content')) {
+                console.log('Ad request fill')
                 const msAdsURL = adResponse.ad_content
                 loadFormat(msAdsURL)
+            } else {
+                console.log('Ad request no fill')
             }
+        } else if (httpRequest.status === 204) {
+            console.log('Ad request no fill')
+            document.body.innerHTML="<div style='width:100%;height:100%;padding-top:25px;text-align:center;'><a href='https://www.ogury.com'><img src='https://www.rugeri.fr/various/og-logo.png' /></a></div>";
+            return    
         } else {
             document.body.innerHTML="<div style='width:100%;height:100%;padding-top:25px;text-align:center;'><a href='https://www.ogury.com'><img src='https://www.rugeri.fr/various/og-logo.png' /></a></div>";
             return
