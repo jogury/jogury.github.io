@@ -129,8 +129,7 @@ function requestAd(userId) {
         console.log('onload requestad')
         
         if (httpRequest.status === 200) {
-            const adResponse = JSON.parse(httpRequest.responseText)
-            console.log(adResponse)
+            let adResponse = JSON.parse(httpRequest.responseText)
             adResponse = adResponse[0]
             
             if (adResponse.hasOwnProperty('ad_content')) {
