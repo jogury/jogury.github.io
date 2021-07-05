@@ -68,7 +68,7 @@ function initProfigAndTag() {
 
 function requestAd(userId) {
     const adRequests = [{
-        ad_unit_id: '',
+        ad_unit_id: '304381_default',
         params: {
             max_height: 180,
             max_width: 180,
@@ -77,9 +77,9 @@ function requestAd(userId) {
 
     const adRequestData = {
         headers: {
-            asset_key: '',
+            asset_key: 'OGY-5257AA4B450B',
             request_id: uuidv4(),
-            consent: '',
+            consent: 'CPFuZORPFuZORAtACAENAwCMAP_AAH_AAAqIAPgAAAAIAPgAAAAIAAA.IGLtV_T9fb2vj-_Z99_tkeYwf95y3p-wzhheMs-8NyZeH_B4Wv2MyvBX4JiQKGRgksjLBAQdtHGlcTQgBwIlViTLMYk2MjzNKJrJEilsbO2dYGD9Pn8HT3ZCY70-vv__7v3ff_3g',
             User: userId
         },
         body: {
@@ -142,10 +142,10 @@ function requestAd(userId) {
             }
         } else if (httpRequest.status === 204) {
             console.log('Ad request no fill')
-            document.body.innerHTML="<div style='width:100%;height:100%;padding-top:25px;text-align:center;'><a href='https://www.ogury.com'><img src='https://www.rugeri.fr/various/og-logo.png' /></a></div>";
+            document.body.innerHTML="<div style='width:100%;height:100%;padding-top:25px;text-align:center;'><a href='https://www.ogury.com'><img src='https://jogury.github.io/og-logo.png' /></a></div>";
             return    
         } else {
-            document.body.innerHTML="<div style='width:100%;height:100%;padding-top:25px;text-align:center;'><a href='https://www.ogury.com'><img src='https://www.rugeri.fr/various/og-logo.png' /></a></div>";
+            document.body.innerHTML="<div style='width:100%;height:100%;padding-top:25px;text-align:center;'><a href='https://www.ogury.com'><img src='https://jogury.github.io/og-logo.png' /></a></div>";
             return
         }
     }
@@ -245,7 +245,7 @@ window.addEventListener('calltag', function (e) {
         case 'ogyForceClose':
             console.log("ogyForceClose");
             //document.getElementsByTagName("amp-sticky-ad")[0].style.display='none'; // unsuccessful attempt to close the sticky ad as we don't have access to the parent DOM in this context
-            document.body.innerHTML="<div style='width:100%;height:100%;padding-top:25px;text-align:center;'><a href='https://www.ogury.com'><img src='https://www.rugeri.fr/various/og-logo.png' /></a></div>";
+            document.body.innerHTML="<div style='width:100%;height:100%;padding-top:25px;text-align:center;'><a href='https://www.ogury.com'><img src='' /></a></div>";
             break;
         default:
             console.log("event "+e.detail.method);
@@ -255,6 +255,6 @@ window.addEventListener('calltag', function (e) {
 function openLink(url) {
     if (url) {
         window.open(url)
-        document.body.innerHTML="<div style='width:100%;height:100%;padding-top:25px;text-align:center;'><a href='https://www.ogury.com'><img src='https://www.rugeri.fr/various/og-logo.png' /></a></div>";
+        document.body.innerHTML="<div style='width:100%;height:100%;padding-top:25px;text-align:center;'><a href='https://www.ogury.com'><img src='https://jogury.github.io/og-logo.png' /></a></div>";
     }
 }
