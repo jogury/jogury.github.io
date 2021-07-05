@@ -138,6 +138,7 @@ function requestAd(userId) {
                 loadFormat(msAdsURL)
             } else {
                 console.log('Ad request no fill')
+                document.body.innerHTML="<div style='width:100%;height:100%;padding-top:25px;text-align:center;'><a href='https://www.ogury.com'><img src='https://jogury.github.io/og-logo.png' /></a></div>";
             }
         } else if (httpRequest.status === 204) {
             console.log('Ad request no fill')
