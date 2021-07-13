@@ -87,7 +87,8 @@ function requestAd(userId) {
                 location: window.location.href,
                 advert_delivery_type: 'GAM',
             },
-            ad_requests: adRequests
+            ad_requests: adRequests,
+            test_campaign_ids: ["105823"]
         },
     }
 
