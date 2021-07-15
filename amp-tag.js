@@ -51,7 +51,7 @@ function initProfigAndTag() {
 
     httpRequest.onload = () => {
         if (httpRequest.status === 200) {
-            // requestAd(userId)
+            requestAd(userId)
         }
     }
     
