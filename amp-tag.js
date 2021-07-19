@@ -68,7 +68,7 @@ function initProfigAndTag() {
 
 function requestAd(userId) {
     const adRequests = [{
-        ad_unit_id: '304381_default',
+        ad_unit_id: '304747_default',
         params: {
             max_height: 180,
             max_width: 180,
@@ -77,7 +77,7 @@ function requestAd(userId) {
 
     const adRequestData = {
         headers: {
-            asset_key: 'OGY-5257AA4B450B',
+            asset_key: 'OGY-F52E9FC5009F',
             request_id: uuidv4(),
             consent: 'CPFuZORPFuZORAtACAENAwCMAP_AAH_AAAqIAPgAAAAIAPgAAAAIAAA.IGLtV_T9fb2vj-_Z99_tkeYwf95y3p-wzhheMs-8NyZeH_B4Wv2MyvBX4JiQKGRgksjLBAQdtHGlcTQgBwIlViTLMYk2MjzNKJrJEilsbO2dYGD9Pn8HT3ZCY70-vv__7v3ff_3g',
             User: userId
