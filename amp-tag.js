@@ -51,7 +51,7 @@ function initProfigAndTag() {
 
     httpRequest.onload = () => {
         if (httpRequest.status === 200) {
-            // requestAd(userId)
+            requestAd(userId)
         }
     }
     
@@ -93,7 +93,7 @@ function requestAd(userId) {
     }
 
     const httpSendObject = {
-        url: 'https://webmobile.presage.io/api/request-ad',
+        url: 'https://ms-bidder-tag.prod.cloud.ogury.io/api/request-ad',
         method: 'POST',
         httpData: {
             headers: {
