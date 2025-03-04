@@ -20,14 +20,14 @@
               data: {
                 creativeId: 'creativeId loaded successfully',
               }
-            }), '*');
+            }), document.referrer);
             console.log('Creative Tag loaded successfully');
             setInterval(() => {
                 window.top.postMessage(JSON.stringify({ogy_postmessage_channel: 'creative_tracking',
                     data: {
                     creativeId: 'creativeId interval successfully',
                     }
-                }), '*');
+                }), document.referrer);
                 console.log('Creative Tag loaded interval message successfully');
             }, 10000);
             </script>
