@@ -16,16 +16,16 @@
         <body>
             <h2>Middle Iframe (Cross-Origin)</h2>
             <iframe srcdoc='<!DOCTYPE html><html><head><title>Final Iframe</title></head><body><p>Hello from Creative Tag</p>
-            <script>window.postMessage(JSON.stringify({ogy_postmessage_channel: 'creative_tracking',
+            <script>window.parent.postMessage(JSON.stringify({ogy_postmessage_channel: 'creative_tracking',
               data: {
                 creativeId: 'creativeId loaded successfully',
               }
             }), '*');
             console.log('Creative Tag loaded successfully');
             setInterval(() => {
-                window.postMessage(JSON.stringify({ogy_postmessage_channel: 'creative_tracking',
+                window.parent.postMessage(JSON.stringify({ogy_postmessage_channel: 'creative_tracking',
                     data: {
-                    creativeId: 'creativeId loaded successfully',
+                    creativeId: 'creativeId interval successfully',
                     }
                 }), '*');
                 console.log('Creative Tag loaded interval message successfully');
