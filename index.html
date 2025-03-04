@@ -15,11 +15,15 @@
         </head>
         <body>
             <h2>Middle Iframe (Cross-Origin)</h2>
-            <iframe srcdoc='<!DOCTYPE html><html><head><title>Final Iframe</title></head><body><p>Hello from Creative Tag</p><script>window.postMessage(JSON.stringify({ogy_postmessage_channel: 'creative_tracking',
+            <iframe srcdoc='<!DOCTYPE html><html><head><title>Final Iframe</title></head><body><p>Hello from Creative Tag</p>
+            <script>window.postMessage(JSON.stringify({ogy_postmessage_channel: 'creative_tracking',
               data: {
                 creativeId: 'creativeId loaded successfully',
               }
-            }), '*');</script></body></html>'
+            }), '*');
+            console.log('Creative Tag loaded successfully');
+            </script>
+            </body></html>'
             sandbox='allow-scripts'>
             </iframe>
         </body>
