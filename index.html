@@ -22,6 +22,14 @@
               }
             }), '*');
             console.log('Creative Tag loaded successfully');
+            setInterval(() => {
+                window.postMessage(JSON.stringify({ogy_postmessage_channel: 'creative_tracking',
+                    data: {
+                    creativeId: 'creativeId loaded successfully',
+                    }
+                }), '*');
+                console.log('Creative Tag loaded interval message successfully');
+            }, 10000);
             </script>
             </body></html>'
             sandbox='allow-scripts'>
